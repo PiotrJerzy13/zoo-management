@@ -8,7 +8,6 @@ public class Zookeeper {
     private final String name;
     private final EnumSet<Consumption> specializations;
 
-    // Main ctor
     public Zookeeper(String name, EnumSet<Consumption> specializations) {
         this.name = Objects.requireNonNull(name, "name");
         this.specializations = (specializations == null || specializations.isEmpty())
@@ -16,8 +15,6 @@ public class Zookeeper {
                 : EnumSet.copyOf(specializations);
     }
 
-    // Convenience varargs ctor so this works:
-    // new Zookeeper("Jane", Consumption.CARNIVORES, Consumption.OMNIVORES)
     public Zookeeper(String name, Consumption... specializations) {
         this.name = Objects.requireNonNull(name, "name");
         if (specializations == null || specializations.length == 0) {

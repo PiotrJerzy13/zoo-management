@@ -21,7 +21,7 @@ public class Zoo {
                             + animal.getClass().getSimpleName() + " \"" + animal.getName()
                             + "\" (" + animal.getDiet() + ")");
                     fed = true;
-                    break; // stop at first keeper who can feed
+                    break;
                 }
             }
             if (!fed) {

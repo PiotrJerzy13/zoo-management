@@ -25,7 +25,6 @@ class ZooFeedtimeTest {
             zoo.feedtime();
             var out = io.out();
 
-            // relaxed checks: contains keeper name, animal type, animal name, and the diet in parentheses
             assertTrue(out.contains("John feeds the Zebra \"Stripes\" (HERBIVORES)"), out);
             assertTrue(out.contains("Jane feeds the Lion \"Leo\" (CARNIVORES)"), out);
             assertTrue(out.contains("Omar feeds the Mandrill \"Azibo\" (OMNIVORES)"), out);
